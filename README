@@ -1,0 +1,65 @@
+= Radar Chart
+
+This is a radar (spider) graphing component for flex
+
+== INSTALL
+
+Requires boost-flex-common library. A version is included in the libs folder, or the latest version
+can be fetched from github.com/boost/boost-flex-common.
+
+Open this project in Flex. In your target project either include either compiled swc file from bin
+folder, or include the project.
+
+== EXAMPLE
+
+Application.mxml:
+
+<mx:Application creationComplete="init();">
+
+  <mx:Script>
+  <![CDATA[
+    
+    private function init():void {
+ 	    chart.addAxis('bread');
+ 	    chart.addAxis('cheese');
+ 	    chart.addAxis('wine');
+ 	    chart.addAxis('fish');
+	    chart.addAxis('meat');
+
+ 	    chart.addSeries('Male', {bread: 3, cheese: 4, wine: 5, fish: 1, meat: 4});
+      chart.addSeries('Female', {bread: 4, cheese: 2, wine: 4, fish: 5, meat: 3});
+    }
+    
+  ]]>
+  </mx:Script>
+
+
+  <mx:Panel width="100%" height="100%">
+    <boost.charts.RadarChart id="radarChart" width="100%" height="100%" />
+  </mx:Panel>
+</mx:Application>
+
+== LICENSE
+
+(The MIT License)
+
+Copyright (c) 2009 Boost Limited http://www.boost.co.nz
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
