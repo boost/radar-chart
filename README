@@ -20,13 +20,13 @@ Application.mxml:
   <![CDATA[
     
     private function init():void {
- 	    chart.addAxis('bread');
- 	    chart.addAxis('cheese');
- 	    chart.addAxis('wine');
- 	    chart.addAxis('fish');
-	    chart.addAxis('meat');
+      chart.addAxis('bread');
+      chart.addAxis('cheese');
+      chart.addAxis('wine');
+      chart.addAxis('fish');
+      chart.addAxis('meat');
 
- 	    chart.addSeries('Male', {bread: 3, cheese: 4, wine: 5, fish: 1, meat: 4});
+      chart.addSeries('Male', {bread: 3, cheese: 4, wine: 5, fish: 1, meat: 4});
       chart.addSeries('Female', {bread: 4, cheese: 2, wine: 4, fish: 5, meat: 3});
     }
     
