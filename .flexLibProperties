@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flexLibProperties version="1">
+<includeClasses>
+<classEntry path="boost.charts.RadarAxis"/>
+<classEntry path="boost.charts.RadarChart"/>
+<classEntry path="boost.charts.RadarChartSeriesEvent"/>
+<classEntry path="boost.charts.RadarSeries"/>
+</includeClasses>
+<includeResources/>
+<namespaceManifests/>
+</flexLibProperties>
