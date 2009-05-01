@@ -148,6 +148,7 @@ package boost.charts {
 		function RadarChart() {
 			super();
 			
+			// Initialize boost array extension
 			ArrayExtension.extend();
 			
 			_axes = new Array();
@@ -476,8 +477,7 @@ package boost.charts {
 					if(axis.angle > Math.PI/2 && axis.angle < 1.5*Math.PI)
 						axis.label.x -= axis.label.width;
 					
-//					if(axis.angle > Math.PI)
-						axis.label.y -= axis.label.height/2;
+					axis.label.y -= axis.label.height/2;
 				}
 			}
 		}
