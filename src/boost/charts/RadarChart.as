@@ -223,6 +223,10 @@ package boost.charts {
 		 * 
 		 */		
 		public function removeSeries(name:String):void {
+			for each(var serie:RadarSeries in _series) {
+				if(serie.name == name && serie.sprite) removeChild(serie.sprite);
+			}
+			
 			_series = _series.filter(function(o:RadarSeries, i:int, a:Array):Boolean {
 				return o.name != name;
 			});
