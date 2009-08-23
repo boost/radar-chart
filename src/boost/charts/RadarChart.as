@@ -721,10 +721,11 @@ package boost.charts {
 			for each(var otherSerie:RadarSeries in sortedSeries) {
 				if(otherSerie != serie)
 					drawSerie(otherSerie, (highlightOn ? 'other' : 'off'));
+				else
+					drawSerie(serie, (highlightOn ? 'on' : 'off'));
 			}
 			
-			drawSerie(serie, (highlightOn ? 'on' : 'off'));
-			
+//			drawSerie(serie, (highlightOn ? 'on' : 'off'));
 		}
 		
 		/**
