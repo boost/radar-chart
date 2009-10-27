@@ -39,6 +39,12 @@ Application.mxml:
   </mx:Panel>
 </mx:Application>
 
+== CHANGELOG
+
+* 1.2: Patch from pward to fix removing axis labels when removing axis.
+* 1.1: Allow removal of axis
+* 1.0: Initial release
+
 == LICENSE
 
 (The MIT License)
