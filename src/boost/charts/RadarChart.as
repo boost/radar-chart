@@ -183,9 +183,18 @@ package boost.charts {
 		 * 
 		 */		
 		public function removeAxis(name:String):void {
-			_axes = _axes.filter(function(o:RadarAxis, i:int, a:Array):Boolean {
-				return o.name != name;
+			var axis:RadarAxis = _axes.find(function(o:RadarAxis):Boolean {
+				return o.name == name;
 			});
+			
+			if(axis.labels)
+				for each(var oldLabel:Label in axis.labels)
+            		removeChild(oldLabel);
+       		if(axis.label)
+				removeChild(axis.label);
+               
+			var index:int = _axes.indexOf(axis);
+			_axes.splice(index, 1);
 			
 			invalidateAxes();
 		}
