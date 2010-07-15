@@ -1,4 +1,7 @@
-compc -output=radar_chart.swc \
+#!/bin/sh
+
+mkdir -p bin
+compc -output=bin/radar_chart.swc \
   -source-path=src \
   -compiler.library-path+=libs \
   -include-file=defaults.css,src/defaults.css \

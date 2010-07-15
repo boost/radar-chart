@@ -7,40 +7,22 @@ This is a radar (spider) graphing component for flex
 Requires boost-flex-common library. A version is included in the libs folder, or the latest version
 can be fetched from github.com/boost/boost-flex-common.
 
+With Flex/Flash Builder:
+
 Open this project in Flex. In your target project either include either compiled swc file from bin
 folder, or include the project.
 
-== EXAMPLE
+From terminal:
 
-Application.mxml:
+run ./build from the project directory to build the swc file.
 
-<mx:Application creationComplete="init();">
+== EXAMPLES
 
-  <mx:Script>
-  <![CDATA[
-    
-    private function init():void {
-      chart.addAxis('bread');
-      chart.addAxis('cheese');
-      chart.addAxis('wine');
-      chart.addAxis('fish');
-      chart.addAxis('meat');
-
-      chart.addSeries('Male', {bread: 3, cheese: 4, wine: 5, fish: 1, meat: 4});
-      chart.addSeries('Female', {bread: 4, cheese: 2, wine: 4, fish: 5, meat: 3});
-    }
-    
-  ]]>
-  </mx:Script>
-
-
-  <mx:Panel width="100%" height="100%">
-    <boost.charts.RadarChart id="chart" width="100%" height="100%" />
-  </mx:Panel>
-</mx:Application>
+Example applications are available in the examples directory.
 
 == CHANGELOG
 
+* 1.3: Flex 4 support, fix for adding series before axis.
 * 1.2: Patch from pward to fix removing axis labels when removing axis.
 * 1.1: Allow removal of axis
 * 1.0: Initial release
