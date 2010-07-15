@@ -650,6 +650,7 @@ package boost.charts {
 			
 			var style:String = highlight == 'on' ? 'Highlight' : highlight == 'other' ? 'HighlightOther' : '';
 			
+			// Create the series sprite if required
 			if(!serie.sprite) {
 				serie.sprite = new Sprite();
 				serie.sprite.addEventListener(MouseEvent.MOUSE_OVER, mouseOverSeriesHandler);
@@ -662,8 +663,10 @@ package boost.charts {
 			var g:Graphics = serie.sprite.graphics;
 			var point:Point;
 			
+			// Clear the series sprite
 			g.clear();
 			
+			// Draw the circle points on the series
 			for each(point in serie.points) {
 				g.beginFill(serie.color, getStyle('series' + style + 'PointAlpha'));
 				g.lineStyle(0, 0, 0);
@@ -671,6 +674,7 @@ package boost.charts {
 				g.endFill();
 			}
 			
+			// Draw the series line
 			g.lineStyle(getStyle('series' + style + 'LineThickness'), serie.color, getStyle('series' + style + 'LineAlpha'));
 			g.moveTo(serie.points[0].x, serie.points[0].y);
 			g.beginFill(serie.color, getStyle('series' + style + 'FillAlpha'));
