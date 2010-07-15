@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  To compile:
+  mxmlc -compiler.library-path+=../libs -debug -strict Flex4Application.mxml 
+-->
+<s:Application 
+  xmlns:fx="http://ns.adobe.com/mxml/2009" 
+  xmlns:s="library://ns.adobe.com/flex/spark" 
+  xmlns:mx="library://ns.adobe.com/flex/halo"
+  xmlns:boost="boost.charts.*"
+   width="800" height="600" creationComplete="init();">
+     
+  <fx:Script>
+    private function init():void {
+      chart.addAxis('bread');
+      chart.addAxis('cheese');
+      chart.addAxis('wine');
+      chart.addAxis('fish');
+      chart.addAxis('meat');
+
+      chart.addSeries('Male', {bread: 3, cheese: 4, wine: 5, fish: 1, meat: 4});
+      chart.addSeries('Female', {bread: 4, cheese: 2, wine: 4, fish: 5, meat: 3});
+    }
+  </fx:Script>
+    
+  <boost:RadarChart id="chart" width="100%" height="100%" />
+</s:Application>

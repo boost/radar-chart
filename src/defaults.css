@@ -1,0 +1,52 @@
+@namespace boost "boost.charts.*";
+
+boost|RadarChart {
+  center-radius: 5;
+  
+  axis-color: 0;
+  axis-thickness: 1;
+  axis-alpha: 1;
+  
+  tick-color: 0;
+  tick-thickness: 1;
+  tick-alpha: 1;
+  tick-length: 5;
+  
+  show-ticks: true;
+  show-titles: true;
+  show-labels: true;
+  
+  series-point-size: 5;
+  series-point-alpha: 1;
+  
+  series-line-thickness: 2;
+  series-line-alpha: 0.5;
+  series-fill-alpha: 0.1;
+  
+  series-highlight-point-size: 5;
+  series-highlight-point-alpha: 1;
+  series-highlight-line-thickness: 2;
+  series-highlight-line-alpha: 0.8;
+  series-highlight-fill-alpha: 0.5;
+  
+  series-highlight-other-point-size: 5;
+  series-highlight-other-point-alpha: 0.5;
+  series-highlight-other-fill-alpha: 0.1;
+  series-highlight-other-line-alpha: 0.2;
+  series-highlight-other-line-thickness: 2;
+  
+  colors: #257BB6, #B7247C, #CCC012, #41C04F, #296997, #26B69B, #CF5F0B, #A041C1;
+  
+  rotate-text: false;
+  
+  padding-left: 10;
+  padding-right: 10;
+  padding-top: 10;
+  padding-bottom: 10;
+  padding-middle: 10;
+  
+  background-color: #ececec;
+  border-color: #9d9d9d;
+  border-thickness: 1;
+  border-alpha: 1;
+}

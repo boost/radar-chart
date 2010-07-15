@@ -1,0 +1,5 @@
+compc -output=radar_chart.swc \
+  -source-path=src \
+  -compiler.library-path+=libs \
+  -include-file=defaults.css,src/defaults.css \
+  boost.charts.RadarChart
