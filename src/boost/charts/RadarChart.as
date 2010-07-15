@@ -674,13 +674,15 @@ package boost.charts {
 				g.endFill();
 			}
 			
-			// Draw the series line
-			g.lineStyle(getStyle('series' + style + 'LineThickness'), serie.color, getStyle('series' + style + 'LineAlpha'));
-			g.moveTo(serie.points[0].x, serie.points[0].y);
-			g.beginFill(serie.color, getStyle('series' + style + 'FillAlpha'));
+			// Draw the series line if there are any points to draw
+			if(serie.points.length > 0) {
+				g.lineStyle(getStyle('series' + style + 'LineThickness'), serie.color, getStyle('series' + style + 'LineAlpha'));
+				g.moveTo(serie.points[0].x, serie.points[0].y);
+				g.beginFill(serie.color, getStyle('series' + style + 'FillAlpha'));
 			
-			for each(point in serie.points) {
-				g.lineTo(point.x, point.y);
+				for each(point in serie.points) {
+					g.lineTo(point.x, point.y);
+				}
 			}
 			
 			g.endFill();
